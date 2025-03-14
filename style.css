@@ -1,0 +1,325 @@
+html, body{
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(247, 247, 247);
+}
+*{
+    transition: all 0.05s;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    width: auto;
+    height: 150px;
+    background-color: rgb(209, 200, 166);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.4s;
+}
+.logo{
+    width: 130px;
+    height: 130px;
+    background: url(img/tehsil.png) center / cover;
+}
+.name{
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(97, 52, 32);
+    padding-left: 20px;
+}
+.header-elements{
+    color: rgb(97, 52, 32);
+    font-size: 25px;
+    margin: 0 10px 0 10px;
+    padding: 5px 15px 5px 15px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.header-elements:hover{
+    background-color: rgb(185, 177, 147);
+}
+.header-elements:active{
+    background-color: rgb(150, 143, 120);
+}
+.header-elements-container{
+    display: flex;
+    margin-left: 40px;
+    min-width: auto;
+    height: auto;
+    flex-wrap: wrap;
+}
+.tehsilAz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+.main{
+    padding-top: 30px;
+    width: auto;
+    height: 200vh;
+    box-sizing: border-box;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.main h1{
+    margin-bottom: 40px;
+}
+.geydiyat-content form, .giris-content form{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.geydiyat-content form input:not(input:nth-child(8)), .giris-content form input:not(input:nth-child(6)){
+    border: 1px solid rgb(151, 151, 151);
+    height: 50px;
+    width: 350px;
+    outline: none;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 2px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.geydiyat-content input:nth-child(8), .giris-content input:nth-child(6){
+    margin-top: 10px;
+    height: 50px;
+    width: 350px;
+    border-radius: 25px;
+    font-size: 20px;
+    color: gray;
+    background-color: rgb(197, 197, 197);
+    color: black;
+    border: 1px solid rgb(151, 151, 151);
+    cursor: pointer;
+}
+.geydiyat-content input:nth-child(8):active, .giris-content input:nth-child(6):active{
+    background-color: rgb(214, 214, 214);
+}
+
+.reg-info, .singin-info{
+    height: auto;
+    width: auto;
+    box-sizing: border-box;
+    padding-left: 100px;
+}
+.singin-info{
+    display: flex;
+    align-items: center;
+}
+.reg-info2, .singin-info2{
+    display: none;
+}
+.melumat-content ul{
+    padding-left: 40px;
+}
+.geydiyat-content{
+    display: none;
+    height: auto;
+    width: auto;
+    align-items: start;
+    justify-content: center;
+    flex-direction: row;
+}
+.giris-content{
+    display: none;
+}
+.warning{
+    display: none;
+    color: rgb(255, 29, 29);
+}
+.footer{
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px 10%;
+    background-color: rgb(71, 71, 71);
+    display: flex;
+    flex-direction: column;
+}
+.footer *{
+    position: relative;
+}
+.links{
+    display: flex;
+    justify-content: space-around;
+    top: 50px;
+    border-top: 1px solid rgb(0, 0, 0);
+    padding-top: 20px;
+}
+.links a{
+    color: rgb(22, 22, 22);
+    font-weight: 600;
+}
+.social{
+    top: 100px;
+}
+.apps{
+    display: flex;
+    justify-content: center;
+}
+.apps *{
+    width: 60px;
+    height: 60px;
+    margin: 0 50px;
+}
+.apps > *:nth-child(1){
+    background: url(img/telegram.png) center / cover;
+}
+.apps > *:nth-child(2){
+    background: url(img/facebook.png) center / cover;
+}
+.apps > *:nth-child(3){
+    background: url(img/youtube.png) center / cover;
+}
+.top-section{
+    margin: 0 10%;
+    margin-bottom: 50px;
+}
+.copy{
+    bottom: -140px;
+    font-weight: bold;
+    border-top: 1px solid rgb(0, 0, 0);
+    padding-top: 30px;
+}
+.mail{
+    top: 30px;
+}
+.first{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: bold;
+}
+.second, .final{
+    color: rgb(14, 14, 14);
+}
+
+@media (max-width: 800px) {
+    .header{
+        height: auto;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+    }
+    .tehsilAz{
+        margin-top: 10px;
+    }
+    .header-elements-container{
+        flex-direction: row;
+        margin: 10px 0 10px 0;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .logo{
+        width: 90px;
+        height: 90px;
+    }
+    .name{
+        font-size: 30px;
+    }
+    .main{
+        font-size: 22px;
+    }
+    .geydiyat-content{
+        justify-content: start;
+    }
+    .reg-info, .singin-info{
+        display: none;
+    }
+    .reg-info2, .singin-info2{
+        display: block;
+        margin-bottom: 20px;
+    }
+    .links{
+        flex-direction: column;
+    }
+    .apps *{
+        margin-right: auto;
+        margin-left: auto;
+        width: 50px;
+        height: 50px;
+    }
+    .footer h2{
+        font-size: 30px;
+    }
+    .apps{
+        top: -50px;
+    }
+    .mail{
+        top: -20px;
+    }
+    .copy{
+        top: 100px;
+        padding-top: 10px;
+    }
+    .links{
+        top: 20px;
+        font-size: 20px;
+        padding-top: 10px;
+    }
+}
+@media(max-width: 460px){
+    .main{
+        font-size: 18px;
+    }
+    .header-elements{
+        font-size: 20px;
+    }
+    .geydiyat-content, .giris-content{
+        justify-content: center;
+    }
+    .geydiyat-content form{
+        align-items: center;
+    }
+    .geydiyat-content form input, .geydiyat-content form input:nth-child(7), .giris-content form input, .giris-content form input:nth-child(5){
+        width: 300px !important; 
+        height: 35px;
+        font-size: 15px;
+    }
+    .apps *{
+        width: 40px;
+        height: 40px;
+    }
+}
+@media(max-width: 240px){
+    .main ul{
+        padding-left: 15%;
+    }
+    .logo{
+        width: 60px;
+        height: 60px;
+    }
+    .main{
+        font-size: 15px;
+    }
+    .name{
+        font-size: 20px;
+    }
+    .header-elements{
+        font-size: 15px;
+        height: auto;
+    }
+}
+@media(max-width: 160px){
+    .logo{
+        display: none;
+    }
+    .name{
+        padding: 0;
+    }
+    .header-elements{
+        font-size: 10px;
+    }
+    .main{
+        font-size: 10px;
+    }
+}
+
